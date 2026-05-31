@@ -28,12 +28,11 @@ Repository ini berisi portofolio proyek akhir (*Final Project*) visualisasi data
 
 Sebelum visualisasi dirancang, seluruh berkas data mentah (*Order, Customer, Payment,* dan *SKU Details*) dihubungkan ke Looker Studio. Untuk memenuhi kebutuhan metrik pemantauan manajemen, dibuat 2 indikator kalkulasi baru (*Calculated Field*):
 
-1. **Net Profit** (Mengukur laba bersih perusahaan):
-   $$\text{Net Profit} = \text{SUM}(\text{before\_discount}) - \text{SUM}(\text{cogs} \times \text{qty\_ordered})$$
+1. **Net Profit** (Mengukur laba bersih perusahaan):  
+   **Net Profit = SUM(before_discount) - SUM(cogs * qty_ordered)**
 
-2. **AOV (Average Order Value)** (Mengetahui rata-rata nilai belanja per transaksi):
-   $$\text{AOV} = \frac{\text{SUM}(\text{before\_discount})}{\text{COUNT\_DISTINCT}(\text{id})}$$
-
+2. **AOV (Average Order Value)** (Mengetahui rata-rata nilai belanja per transaksi):  
+   **AOV = SUM(before_discount) / COUNT_DISTINCT(id)**
 ---
 
 ## 📉 Dashboard Halaman 1: Performa Kampanye Pemasaran (Marketing Campaign)
